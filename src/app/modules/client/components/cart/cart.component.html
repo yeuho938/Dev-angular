@@ -1,0 +1,33 @@
+<div class="box-cart">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+    <li class="breadcrumb-item"><a routerLink="/cart">Cart </a></li>
+  </ul>
+  <h1 class="cart-title"> Your shopping bag</h1>
+  <div class="cart-table">
+    <dx-data-grid id="gridContainer" [dataSource]="cartData" [showBorders]="true">
+      <dxi-column dataField="image" [width]="110" [allowFiltering]="false"
+                  [allowSorting]="false" cellTemplate="cellTemplate"></dxi-column>
+      <dxi-column dataField="name" [width]="100" ></dxi-column>
+      <dxi-column dataField="price" [width]="100"></dxi-column>
+      <dxi-column dataField="quantity" [width]="100"></dxi-column>
+
+      <div *dxTemplate="let data of 'cellTemplate'">
+        <img [src]="data.value"/>
+      </div>
+    </dx-data-grid>
+    <div class="table--totalPrice">
+      <p><strong>Total price: </strong>
+<!--        {{this.totalPrice| currency: 'VND':true:'1.0'}}-->
+      </p>
+    </div>
+    <div class="table--shopping-checkout">
+      <button type="submit" class="btn back-shopping" routerLink="/home">
+        Back shopping
+      </button>
+      <button type="submit" class="btn checkout" routerLink="/checkout" >
+        Checkout
+      </button>
+    </div>
+  </div>
+</div>

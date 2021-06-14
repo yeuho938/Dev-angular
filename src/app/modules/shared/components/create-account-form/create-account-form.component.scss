@@ -1,0 +1,25 @@
+//@import "../../../../themes/generated/variables.base.scss";
+$base-accent: #ff5722;
+$base-text-color: rgba(0, 0, 0, 0.87);
+$base-bg: #fff;
+$base-border-color: #e0e0e0;
+$base-border-radius: 4px;
+
+.create-account-form {
+  .policy-info {
+    margin: 10px 0;
+    color: rgba($base-text-color, alpha($base-text-color) * 0.7);
+    font-size: 14px;
+    font-style: normal;
+
+    a {
+      color: rgba($base-text-color, alpha($base-text-color) * 0.7);
+    }
+  }
+
+  .login-link {
+    color: $base-accent;
+    font-size: 16px;
+    text-align: center;
+  }
+}

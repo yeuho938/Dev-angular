@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "c855f568-0dda-4e4e-9ca1-6e6e0fc47778"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -47,6 +50,10 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/devextreme/dist/css/dx.common.css",
+              "src/themes/generated/theme.base.css",
+              "src/themes/generated/theme.additional.css",
+              "src/dx-styles.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -56,8 +63,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "7mb"
                 },
                 {
                   "type": "anyComponentStyle",
